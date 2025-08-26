@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const { lazy } = require('react');
 const users =  new mongoose.Schema({
     firstName: {
         type: String,
@@ -8,6 +7,11 @@ const users =  new mongoose.Schema({
     lastName: {
         type: String,
         required: true
+    },
+    username: {
+        type: String,
+        required: true,
+        unique: true
     },
     age: {
         type: Number,
